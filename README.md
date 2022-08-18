@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Rating Component Solution](https://github.com/AmanGupta1703/Rating-Component)
-- Live Site URL: [Rating Component](https://amangupta1703.github.io/Rating-Component/)
+- Solution URL: [(https://github.com/AmanGupta1703/Rating-Component)]
+- Live Site URL: [https://amangupta1703.github.io/Rating-Component/]
 
 ### Built with
 - CSS custom properties
