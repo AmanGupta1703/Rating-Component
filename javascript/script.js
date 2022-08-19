@@ -27,19 +27,13 @@ for (let i = 0; i < ratingBtn.length; i++) {
 // adding a click evnt listener when a button is pressed
 for (let i = 0; i < ratingBtn.length; i++) {
   ratingBtn[i].addEventListener("click", function (event) {
-    ratingBtn[i].classList.toggle("rating-btn-pressed");
-
+    ratingBtn[i].classList.add("rating-btn-pressed");
     ratingArr.push(event.target.id);
-    console.log(ratingArr);
+
+    // removeSelectedBtn(event.target);
 
     submitBtn.addEventListener("click", function () {
-      if (ratingArr.length === 0) {
-        submitBtn.innerHTML = "Please rate!";
-
-        setTimeout(function () {
-          submitBtn.innerHTML = submitBtnTextContent;
-        }, 2000);
-      } else if (ratingArr.length >= 1) {
+      if (ratingArr.length >= 1) {
         ratingContainer.style.display = "none";
         thankYouContainer.style.display = "flex";
         userRating.innerHTML = `You selected ${event.target.id} out of 5`;
@@ -47,3 +41,14 @@ for (let i = 0; i < ratingBtn.length; i++) {
     });
   });
 }
+
+submitBtn.addEventListener("click", function () { 
+  if (ratingArr.length === 0) {
+    submitBtn.innerHTML = "Please rate!";
+
+    setTimeout(function () {
+      submitBtn.innerHTML = submitBtnTextContent;
+    }, 2000);
+  }
+ });
+
